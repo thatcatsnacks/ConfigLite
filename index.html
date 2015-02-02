@@ -51,19 +51,20 @@ attribute4='c';
 <h3>
 <a id="configlite-sample-use" class="anchor" href="#configlite-sample-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>ConfigLite Sample Use</h3>
 
-<p>The ConfigLite API makes it incredibly easy to manage an existing config file, or to create a new one. To demonstrate the ease of ConfigLite, here are some sample tasks:
-*To add an element:</p>
+<p>The ConfigLite API makes it incredibly easy to manage an existing config file, or to create a new one. To demonstrate the ease of ConfigLite, here are some sample tasks:</p>
+
+<p>To add an element:</p>
 
 <pre><code>ConfigLite config = new ConfigLite();
 config.addElement("ELEMENT_NAME");
 </code></pre>
 
-<p>*To add a setting to an element:</p>
+<p>To add a setting to an element:</p>
 
 <pre><code>config.addSetting("ELEMENT_NAME", "attribute_name", "value");
 </code></pre>
 
-<p>*To add multiple settings to an element</p>
+<p>To add multiple settings to an element:</p>
 
 <pre><code>//Note: you can use the above method to enter multiples
 config.enterElement("ELEMENT_NAME");
