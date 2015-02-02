@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="ConfigLite : A very lightweight/minimalist config file manager">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>ConfigLite</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/thatcatsnacks/ConfigLite">View on GitHub</a>
+
+          <h1 id="project_title">ConfigLite</h1>
+          <h2 id="project_tagline">A very lightweight/minimalist config file manager</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/thatcatsnacks/ConfigLite/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/thatcatsnacks/ConfigLite/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a id="configlite-a-fast-lightweight-configuration-management-system" class="anchor" href="#configlite-a-fast-lightweight-configuration-management-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>ConfigLite: A fast, lightweight configuration management system</h3>
+
+<p>ConfigLite is a lightweight and minimalist configuration file (config) management system. ConfigLite is exceptionally effective at handling files that contain up to 60 settings. With an easy-to-use config syntax, and an intuitive interface for config file management, ConfigLite is perfect for projects using smaller configs.</p>
+
+<h3>
+<a id="configlite-configuration-file-syntax" class="anchor" href="#configlite-configuration-file-syntax" aria-hidden="true"><span class="octicon octicon-link"></span></a>ConfigLite Configuration File Syntax</h3>
+
+<p>A ConfigLite config is made up of two entities: <em>Elements</em> and <em>Settings</em>. An <em>element</em> is the highest-level entity, and is enclosed in braces('[' and ']'). An <em>element</em> name may only contain alphanumeric characters, and must be all-caps. An <em>element</em> is the parent object of the second entity, a <em>setting</em>. A <em>setting</em> is made up of two parts: the attribute and the value. An attribute may only contain alphanumeric characters. A value can be represented as any of Java's common data types(String, int, short, byte, boolean, char). A <em>setting</em> must enclose strings in double-quotes, characters in single-quotes, and all other datatypes without quotes. Finally, a <em>setting</em> must end with a semicolon. A config file will look similar to:</p>
+
+<pre><code>[ELEMENT_NAME]
+attribute1="value1";
+attribute2=2;
+attribute3=true;
+attribute4='c';
+</code></pre>
+
+<h3>
+<a id="configlite-sample-use" class="anchor" href="#configlite-sample-use" aria-hidden="true"><span class="octicon octicon-link"></span></a>ConfigLite Sample Use</h3>
+
+<p>The ConfigLite API makes it incredibly easy to manage an existing config file, or to create a new one. To demonstrate the ease of ConfigLite, here are some sample tasks:
+*To add an element:</p>
+
+<pre><code>ConfigLite config = new ConfigLite();
+config.addElement("ELEMENT_NAME");
+</code></pre>
+
+<p>*To add a setting to an element:</p>
+
+<pre><code>config.addSetting("ELEMENT_NAME", "attribute_name", "value");
+</code></pre>
+
+<p>*To add multiple settings to an element</p>
+
+<pre><code>//Note: you can use the above method to enter multiples
+config.enterElement("ELEMENT_NAME");
+config.addSetting("attribute_name", "value");
+config.addSetting("attribute_name2", 2);
+</code></pre>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>Cat Snacks is the pseudonym of a Star Wars loving Computer Science student. So far, he is the sole contributor/author of the software located at <a href="https://hithub.com/thatcatsnacks">https://hithub.com/thatcatsnacks</a>.</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Contact Cat by messaging on GitHub, or at Reddit (/u/thatcatsnacks).</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">ConfigLite maintained by <a href="https://github.com/thatcatsnacks">thatcatsnacks</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
