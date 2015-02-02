@@ -278,7 +278,7 @@ public class ConfigLite {
 	 */
 	public boolean addSetting(String element, String attr, String value){
 		value = '"'+value+"'";
-		fh.addSetting(element, attr, value);
+		if(!fh.addSetting(element, attr, value)) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -297,7 +297,7 @@ public class ConfigLite {
 	 * @return
 	 */
 	public boolean addSetting(String element, String attr, int value){
-		fh.addSetting(element, attr, String.valueOf(value));
+		if(!fh.addSetting(element, attr, String.valueOf(value))) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -316,7 +316,7 @@ public class ConfigLite {
 	 * @return
 	 */
 	public boolean addSetting(String element, String attr, Short value){
-		fh.addSetting(element, attr, String.valueOf(value));
+		if(!fh.addSetting(element, attr, String.valueOf(value))) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -335,7 +335,7 @@ public class ConfigLite {
 	 * @return
 	 */
 	public boolean addSetting(String element, String attr, boolean value){
-		fh.addSetting(element, attr, String.valueOf(value));
+		if(!fh.addSetting(element, attr, String.valueOf(value))) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -354,7 +354,7 @@ public class ConfigLite {
 	 * @return
 	 */
 	public boolean addSetting(String element, String attr, byte value){
-		fh.addSetting(element, attr, String.valueOf(value));
+		if(!fh.addSetting(element, attr, String.valueOf(value))) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -374,7 +374,7 @@ public class ConfigLite {
 	 */
 	public boolean addSetting(String element, String attr, char value){
 		String v = "\'"+value+'\'';
-		fh.addSetting(element, attr, v);
+		if(!fh.addSetting(element, attr, v)) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -392,7 +392,7 @@ public class ConfigLite {
 	 */
 	public boolean addSetting(String attr, String value){
 		value = '"'+value+'"';
-		fh.addSetting(attr, value);
+		if(!fh.addSetting(attr, value)) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -410,7 +410,7 @@ public class ConfigLite {
 	 * @return
 	 */
 	public boolean addSetting(String attr, int value){
-		fh.addSetting(attr, String.valueOf(value));
+		if(!fh.addSetting(attr, String.valueOf(value))) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -429,7 +429,7 @@ public class ConfigLite {
 	 */
 	public boolean addSetting(String attr, short value){
 
-		fh.addSetting(attr, String.valueOf(value));
+		if(!fh.addSetting(attr, String.valueOf(value))) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -447,7 +447,7 @@ public class ConfigLite {
 	 * @return
 	 */
 	public boolean addSetting(String attr, boolean value){
-		fh.addSetting(attr, String.valueOf(value));
+		if(!fh.addSetting(attr, String.valueOf(value))) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -465,7 +465,7 @@ public class ConfigLite {
 	 * @return
 	 */
 	public boolean addSetting(String attr, byte value){
-		fh.addSetting(attr, String.valueOf(value));
+		if(!fh.addSetting(attr, String.valueOf(value))) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();
@@ -484,7 +484,7 @@ public class ConfigLite {
 	 */
 	public boolean addSetting(String attr, char value){
 		String v = "\'"+value+'\'';
-		fh.addSetting(attr, v);
+		if(!fh.addSetting(attr, v)) return false;
 		if(!writeOnce){
 			try {
 				fh.writeConfig();

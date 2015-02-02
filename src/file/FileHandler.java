@@ -147,6 +147,8 @@ public class FileHandler {
 		
 		return null;
 	}
+	
+
 	/**
 	 * adds element to config, must precede this with setElement
 	 * @param attr
@@ -155,6 +157,7 @@ public class FileHandler {
 	 */
 	public boolean addSetting(String attr, String value){
 		if(currentElement == null) return false;
+		if(currentElement.hasSetting(attr))return false;
 		
 		currentElement.addSetting(attr, value);
 		return true;
@@ -168,6 +171,8 @@ public class FileHandler {
 	 */
 	public boolean addSetting(String element, String attr, String value){
 		Element e = config.getElement(element);
+		if(e.hasSetting(attr))return false;
+		
 		e.addSetting(attr, value);
 		return true;
 	}

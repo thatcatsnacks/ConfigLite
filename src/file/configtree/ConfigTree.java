@@ -119,6 +119,15 @@ public class ConfigTree {
 			return settings.get(index);
 		}
 		
+		public boolean hasSetting(String attr){
+			for(int i=0; i<settings.size(); i++){
+				// if the element name = specified name
+				if(settings.get(i).getAttribute().equals(attr))
+					return true;
+			}
+			// no element found..
+			return false;
+		}
 		/**
 		 * returns size of settings list
 		 * @return
